@@ -79,8 +79,15 @@ def fn_RegistrarIncidencia_lst(mensaje_str, historial_lst=[]):
     Si no se indica ningún historial, se empieza uno nuevo (vacío).
     """
     historial_lst.append(mensaje_str)
-
+    
+    if historial_lst is None:
+            historial_lst = []
+    
     return historial_lst
+    
+    
+    #Se que el fallo esta aqui, ya que si no se indica ningun historial hay que crear uno nuevo, y no está puesto. Solo que no se si esta bien añadido.
+
 
 
 def fn_CalcularPrecioConIVA_fl(precio_fl):
